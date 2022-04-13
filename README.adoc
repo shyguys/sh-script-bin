@@ -1,0 +1,29 @@
+= bs-bin
+
+TBD.
+
+== Settings
+
+.data.json
+[source,bash]
+-----
+{
+  "BIN_PARENT_DIR": "",
+  "BIN_LINK_DIR": "",
+
+  "binaries": [
+    {
+      "name": "terraform",
+      "exec": {
+        "download": {
+          "binary": [
+            "wget -P \".\" \"https://releases.hashicorp.com/terraform/${BIN_VERSION}/terraform_${BIN_VERSION}_linux_amd64.zip\"",
+            "unzip -oqd \".\" \"terraform_${BIN_VERSION}_linux_amd64.zip\""
+          ],
+          "checksum": []
+        }
+      }
+    },
+  ]
+}
+-----
